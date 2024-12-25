@@ -15,30 +15,32 @@
 
   <main>
     <button id="meuBotao">Clica Aqui</button>
-    <button id="mostrarTexto" style="display: none;">Mostrar Texto Secreto</button>
+    
+    <div id="senhaCaixa" class="senha-container" style="display: none;">
+      <input type="password" id="senhaInput" placeholder="Digite a senha">
+      <button id="confirmarSenha">Confirmar</button>
+      <p id="aviso" style="color: red; display: none;">Senha incorreta. Tente novamente.</p>
+    </div>
+    
+    <div id="imageGallery" class="gallery" style="display: none;"></div>
 
+    <!-- Botão para revelar o texto secreto (inicialmente oculto) -->
+    <button id="mostrarTexto">Mostrar Texto Secreto</button>
+    <!-- Texto escondido -->
     <div id="textoSecreto" class="texto-secreto" style="display: none;">
-      <p>Aproveita teu dia meu bem, Deus abençoe sua vida e saiba que me importo e me preocupo com você. Sempre que precisar pode contar comigo ta? Posso não estar ai agora, mas se tivesse te daria um abraço bem apertado e diria: Feliz Aniversário🥳🎉</p>
-    </div>
-
-    <div id="erroMensagem" style="color: red; display: none;">
-      <p>Erro. Tente Novamente.</p>
-    </div>
-
-    <div id="senhaBotao">
-      <input type="password" id="senhaInputBotao" placeholder="Digite a senha para liberar o botão">
-      <button id="confirmarSenhaBotao">Confirmar</button>
-    </div>
-
-    <div id="senhaTexto" style="display: none;">
-      <input type="password" id="senhaInputTexto" placeholder="Digite a senha para liberar o texto secreto">
-      <button id="confirmarSenhaTexto">Confirmar</button>
+      <p>Texto personalizado do rodapé: "Espero que tenha gostado da surpresa! Que esse dia seja especial!"</p>
     </div>
 
   </main>
 
+  <!-- Caixa de senha do texto secreto -->
+  <div id="senhaCaixaSecreta" class="senha-container" style="display: none;">
+    <input type="password" id="senhaInputSecreta" placeholder="Digite a senha para revelar o texto secreto">
+    <button id="confirmarSenhaSecreta">Confirmar</button>
+  </div>
+
   <footer>
-    <p>Créditos: Rafinha e Armandinha</p>
+    <p>Créditos: Rafinha e Armandinha"</p>
   </footer>
 
   <script src="script.js"></script>
