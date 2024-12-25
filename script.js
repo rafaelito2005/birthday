@@ -24,9 +24,9 @@ function mostrarImagens() {
   const gallery = document.getElementById("imageGallery");
   const imagens = [
     { src: "./images/picture1.jpg", texto: "Finalmente a gente tinha tirado uma foto boa juntos, porque aquela primeira a gente ficou parecendo dois ET" },
-    { src: "./images/picture2.jpg", texto: "Essa aqui é fofa não podia faltar" },
-    { src: "./images/picture3.jpg", texto: "Essa também não podia faltar" },
-    { src: "./images/picture4.jpg", texto: "Simplesmente eu fardado e tu de boina, essa ficou incrível, preciso dizer algo mais? Só que essa foi nossa última fotos juntos até então..." }
+    { src: "./images/picture2.jpg", texto: "Essa aqui é uma das melhores" },
+    { src: "./images/picture3.jpg", texto: "Essa também não podia faltar né muito fofinha" },
+    { src: "./images/picture4.jpg", texto: "Simplesmente eu fardado e tu de boina, ficou incrível, preciso dizer algo mais?... a segunda senha é o meu aniversário" }
   ];
 
   imagens.forEach(({ src, texto }) => {
@@ -56,7 +56,7 @@ document.getElementById("mostrarTexto").addEventListener("click", function () {
 // Caixa de senha do botão "Mostrar Texto Secreto"
 document.getElementById("confirmarSenhaSecreta").addEventListener("click", function () {
   const senhaInputSecreta = document.getElementById("senhaInputSecreta").value;
-  const senhaCorretaSecreta = "123456"; // Senha do texto secreto, altere conforme necessário
+  const senhaCorretaSecreta = "03122005"; // Senha do texto secreto, altere conforme necessário
 
   if (senhaInputSecreta === senhaCorretaSecreta) {
     // Se a senha estiver correta, exibe o texto secreto
