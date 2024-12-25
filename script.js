@@ -1,28 +1,37 @@
-// Quando o botão for clicado, mostra a galeria de imagens
+// Função para liberar o botão da galeria de imagens
+document.getElementById("confirmarSenhaBotao").addEventListener("click", function() {
+  const senhaInput = document.getElementById("senhaInputBotao");
+  const senha = "12345"; // Exemplo de senha para a galeria
+
+  if (senhaInput.value === senha) {
+    document.getElementById("meuBotao").style.display = "block"; // Exibe o botão "Clica Aqui"
+    document.getElementById("senhaBotao").style.display = "none"; // Oculta o campo de senha
+  } else {
+    document.getElementById("avisoBotao").style.display = "block"; // Exibe aviso de senha incorreta
+  }
+});
+
+// Exibir a galeria de imagens quando o botão "Clica Aqui" for pressionado
 document.getElementById("meuBotao").addEventListener("click", function() {
-  // Mostra ou esconde a galeria de imagens
   const gallery = document.getElementById("imageGallery");
   gallery.style.display = gallery.style.display === "none" ? "block" : "none";
 });
 
-// Controle de senha para mostrar o texto secreto
-document.getElementById("confirmarSenha").addEventListener("click", function() {
-  const senha = document.getElementById("senhaInput").value;
-  if (senha === "1234") {
-    document.getElementById("textoSecreto").style.display = "block"; // Mostra o texto secreto
-    document.getElementById("senhaCaixa").style.display = "none"; // Esconde o campo de senha
+// Função para liberar o botão do texto secreto
+document.getElementById("confirmarSenhaTexto").addEventListener("click", function() {
+  const senhaInputTexto = document.getElementById("senhaInputTexto");
+  const senhaTexto = "67890"; // Exemplo de senha para o texto secreto
+
+  if (senhaInputTexto.value === senhaTexto) {
+    document.getElementById("mostrarTexto").style.display = "block"; // Exibe o botão "Mostrar Texto Secreto"
+    document.getElementById("senhaTexto").style.display = "none"; // Oculta o campo de senha
   } else {
-    document.getElementById("aviso").style.display = "block"; // Mostra aviso de erro
+    document.getElementById("avisoTexto").style.display = "block"; // Exibe aviso de senha incorreta
   }
 });
 
-// Controle de senha para acessar o texto secreto
-document.getElementById("confirmarSenhaSecreta").addEventListener("click", function() {
-  const senhaSecreta = document.getElementById("senhaInputSecreta").value;
-  if (senhaSecreta === "5678") {
-    document.getElementById("textoSecreto").style.display = "block"; // Mostra o texto secreto
-    document.getElementById("senhaCaixaSecreta").style.display = "none"; // Esconde o campo de senha
-  } else {
-    alert("Senha incorreta. Tente novamente.");
-  }
+// Exibir o texto secreto quando o botão "Mostrar Texto Secreto" for pressionado
+document.getElementById("mostrarTexto").addEventListener("click", function() {
+  const textoSecreto = document.getElementById("textoSecreto");
+  textoSecreto.style.display = textoSecreto.style.display === "none" ? "block" : "none";
 });
