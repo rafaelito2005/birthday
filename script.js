@@ -65,5 +65,13 @@ document.getElementById("confirmarSenhaSecreta").addEventListener("click", funct
   } else {
     // Exibe a mensagem de erro
     alert("Senha incorreta! Tente novamente.");
+
+    // Quando o botão for clicado, mostra a galeria de imagens
+document.getElementById("meuBotao").addEventListener("click", function() {
+  // Mostra a galeria de imagens
+  const gallery = document.getElementById("imageGallery");
+  gallery.style.display = gallery.style.display === "none" ? "block" : "none";
+});
+
   }
 });
