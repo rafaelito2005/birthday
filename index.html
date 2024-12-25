@@ -14,32 +14,27 @@
   </header>
 
   <main>
-    <!-- Senha para acessar a galeria de imagens -->
+    <!-- Primeira Senha para acessar o botão "Clica Aqui" -->
     <div id="senhaBotao" class="senha-container">
-      <input type="password" id="senhaInputBotao" placeholder="Digite a senha para acessar a galeria">
+      <input type="password" id="senhaInputBotao" placeholder="Digite a senha para liberar o botão">
       <button id="confirmarSenhaBotao">Confirmar</button>
-      <p id="avisoBotao" style="color: red; display: none;">Senha incorreta. Tente novamente.</p>
+      <p id="avisoBotao" style="color: red; display: none;">Erro. Tente Novamente.</p>
     </div>
 
+    <!-- Botão "Clica Aqui", inicialmente oculto -->
     <button id="meuBotao" style="display: none;">Clica Aqui</button>
 
-    <!-- Galeria de imagens, inicialmente oculta -->
-    <div id="imageGallery" class="gallery" style="display: none;">
-      <img src="images/picture1.jpg" alt="Descrição da imagem">
-      <img src="images/picture2.jpg" alt="Descrição da imagem">
-      <img src="images/picture3.jpg" alt="Descrição da imagem">
-    </div>
-
-    <!-- Senha para acessar o texto secreto -->
-    <div id="senhaTexto" class="senha-container">
-      <input type="password" id="senhaInputTexto" placeholder="Digite a senha para o texto secreto">
+    <!-- Segunda Senha para acessar o botão "Mostrar Texto Secreto" -->
+    <div id="senhaTexto" class="senha-container" style="display: none;">
+      <input type="password" id="senhaInputTexto" placeholder="Digite a senha para liberar o texto secreto">
       <button id="confirmarSenhaTexto">Confirmar</button>
-      <p id="avisoTexto" style="color: red; display: none;">Senha incorreta. Tente novamente.</p>
+      <p id="avisoTexto" style="color: red; display: none;">Erro. Tente Novamente.</p>
     </div>
 
+    <!-- Botão "Mostrar Texto Secreto", inicialmente oculto -->
     <button id="mostrarTexto" style="display: none;">Mostrar Texto Secreto</button>
 
-    <!-- Texto escondido -->
+    <!-- Texto Secreto, inicialmente oculto -->
     <div id="textoSecreto" class="texto-secreto" style="display: none;">
       <p>Aproveita teu dia meu bem, Deus abençoe sua vida e saiba que me importo e me preocupo com você. Sempre que precisar pode contar comigo ta? Posso não estar ai agora, mas se tivesse te daria um abraço bem apertado e diria: Feliz Aniversário🥳🎉</p>
     </div>
