@@ -5,34 +5,24 @@ document.getElementById("meuBotao").addEventListener("click", function() {
   gallery.style.display = gallery.style.display === "none" ? "block" : "none";
 });
 
-// Exibir o texto secreto quando o botão for pressionado
-document.getElementById("mostrarTexto").addEventListener("click", function() {
-  const textoSecreto = document.getElementById("textoSecreto");
-  textoSecreto.style.display = textoSecreto.style.display === "none" ? "block" : "none";
-});
-
-// Função para confirmar a senha e exibir a galeria de imagens
+// Controle de senha para mostrar o texto secreto
 document.getElementById("confirmarSenha").addEventListener("click", function() {
-  const senhaInput = document.getElementById("senhaInput");
-  const senha = "12345"; // Exemplo de senha
-
-  if (senhaInput.value === senha) {
-    document.getElementById("imageGallery").style.display = "block";
-    document.getElementById("senhaCaixa").style.display = "none"; // Ocultar caixa de senha
+  const senha = document.getElementById("senhaInput").value;
+  if (senha === "1234") {
+    document.getElementById("textoSecreto").style.display = "block"; // Mostra o texto secreto
+    document.getElementById("senhaCaixa").style.display = "none"; // Esconde o campo de senha
   } else {
-    document.getElementById("aviso").style.display = "block"; // Exibir aviso de senha incorreta
+    document.getElementById("aviso").style.display = "block"; // Mostra aviso de erro
   }
 });
 
-// Função para confirmar a senha do texto secreto
+// Controle de senha para acessar o texto secreto
 document.getElementById("confirmarSenhaSecreta").addEventListener("click", function() {
-  const senhaInputSecreta = document.getElementById("senhaInputSecreta");
-  const senhaSecreta = "67890"; // Exemplo de senha secreta
-
-  if (senhaInputSecreta.value === senhaSecreta) {
-    document.getElementById("textoSecreto").style.display = "block";
-    document.getElementById("senhaCaixaSecreta").style.display = "none"; // Ocultar caixa de senha secreta
+  const senhaSecreta = document.getElementById("senhaInputSecreta").value;
+  if (senhaSecreta === "5678") {
+    document.getElementById("textoSecreto").style.display = "block"; // Mostra o texto secreto
+    document.getElementById("senhaCaixaSecreta").style.display = "none"; // Esconde o campo de senha
   } else {
-    alert("Senha incorreta!"); // Mensagem de erro caso a senha secreta esteja errada
+    alert("Senha incorreta. Tente novamente.");
   }
 });
