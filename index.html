@@ -14,48 +14,37 @@
   </header>
 
   <main>
-    <button id="meuBotao">Clica Aqui</button>
-
-    <div id="senhaCaixa" class="senha-container" style="display: none;">
-      <input type="password" id="senhaInput" placeholder="Digite a senha">
-      <button id="confirmarSenha">Confirmar</button>
-      <p id="aviso" style="color: red; display: none;">Senha incorreta. Tente novamente.</p>
+    <!-- Botão de galeria de imagens, inicialmente oculto até a senha ser fornecida -->
+    <div id="senhaBotao" class="senha-container">
+      <input type="password" id="senhaInputBotao" placeholder="Digite a senha para acessar a galeria">
+      <button id="confirmarSenhaBotao">Confirmar</button>
+      <p id="avisoBotao" style="color: red; display: none;">Senha incorreta. Tente novamente.</p>
     </div>
 
-    <!-- Galeria de imagens inicialmente oculta -->
+    <button id="meuBotao" style="display: none;">Clica Aqui</button>
+
+    <!-- Galeria de imagens, inicialmente oculta -->
     <div id="imageGallery" class="gallery" style="display: none;">
-      <figure>
-        <img src="images/picture1.jpg" alt="Foto 1 da galeria" style="width: 100%; margin: 10px;">
-        <figcaption>Finalmente a gente tinha tirado uma foto boa juntos, porque aquela primeira a gente ficou parecendo dois ET</figcaption>
-      </figure>
-      <figure>
-        <img src="images/picture2.jpg" alt="Foto 2 da galeria" style="width: 100%; margin: 10px;">
-        <figcaption>Essa aqui é fofa não podia faltar</figcaption>
-      </figure>
-      <figure>
-        <img src="images/picture3.jpg" alt="Foto 3 da galeria" style="width: 100%; margin: 10px;">
-        <figcaption>Essa também não podia faltar</figcaption>
-      </figure>
-      <figure>
-        <img src="images/picture4.jpg" alt="Foto 4 da galeria" style="width: 100%; margin: 10px;">
-        <figcaption>Simplesmente eu fardado e tu de boina, essa ficou incrível, preciso dizer algo mais? Só que essa foi nossa última fotos juntos até então...</figcaption>
-      </figure>
+      <img src="images/picture1.jpg" alt="Descrição da imagem">
+      <img src="images/picture2.jpg" alt="Descrição da imagem">
+      <img src="images/picture3.jpg" alt="Descrição da imagem">
     </div>
 
-    <!-- Botão para revelar o texto secreto (inicialmente oculto) -->
-    <button id="mostrarTexto">Mostrar Texto Secreto</button>
+    <!-- Botão para revelar o texto secreto, inicialmente oculto até a senha ser fornecida -->
+    <div id="senhaTexto" class="senha-container">
+      <input type="password" id="senhaInputTexto" placeholder="Digite a senha para o texto secreto">
+      <button id="confirmarSenhaTexto">Confirmar</button>
+      <p id="avisoTexto" style="color: red; display: none;">Senha incorreta. Tente novamente.</p>
+    </div>
+
+    <button id="mostrarTexto" style="display: none;">Mostrar Texto Secreto</button>
 
     <!-- Texto escondido -->
     <div id="textoSecreto" class="texto-secreto" style="display: none;">
       <p>Aproveita teu dia meu bem, Deus abençoe sua vida e saiba que me importo e me preocupo com você. Sempre que precisar pode contar comigo ta? Posso não estar ai agora, mas se tivesse te daria um abraço bem apertado e diria: Feliz Aniversário🥳🎉</p>
     </div>
-  </main>
 
-  <!-- Caixa de senha do texto secreto -->
-  <div id="senhaCaixaSecreta" class="senha-container" style="display: none;">
-    <input type="password" id="senhaInputSecreta" placeholder="Digite a senha">
-    <button id="confirmarSenhaSecreta">Confirmar</button>
-  </div>
+  </main>
 
   <footer>
     <p>Créditos: Rafinha e Armandinha</p>
