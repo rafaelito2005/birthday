@@ -1,7 +1,7 @@
-// Função para liberar o botão da galeria de imagens
+// Função para liberar o botão de galeria de imagens
 document.getElementById("confirmarSenhaBotao").addEventListener("click", function() {
   const senhaInput = document.getElementById("senhaInputBotao");
-  const senha = "12345"; // Exemplo de senha para a galeria
+  const senha = "12345"; // Senha correta para a galeria
 
   if (senhaInput.value === senha) {
     document.getElementById("meuBotao").style.display = "block"; // Exibe o botão "Clica Aqui"
@@ -17,10 +17,10 @@ document.getElementById("meuBotao").addEventListener("click", function() {
   gallery.style.display = gallery.style.display === "none" ? "block" : "none";
 });
 
-// Função para liberar o botão do texto secreto
+// Função para liberar o botão de texto secreto
 document.getElementById("confirmarSenhaTexto").addEventListener("click", function() {
   const senhaInputTexto = document.getElementById("senhaInputTexto");
-  const senhaTexto = "67890"; // Exemplo de senha para o texto secreto
+  const senhaTexto = "67890"; // Senha correta para o texto secreto
 
   if (senhaInputTexto.value === senhaTexto) {
     document.getElementById("mostrarTexto").style.display = "block"; // Exibe o botão "Mostrar Texto Secreto"
