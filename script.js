@@ -7,10 +7,10 @@ document.getElementById("confirmarSenhaBotao").addEventListener("click", functio
     // Se a senha estiver correta, exibe o botão "Clica Aqui"
     document.getElementById("meuBotao").style.display = "block";
     document.getElementById("senhaBotao").style.display = "none"; // Esconde o campo de senha
-    document.getElementById("avisoBotao").style.display = "none"; // Remove o aviso de erro
+    document.getElementById("erroMensagem").style.display = "none"; // Remove o aviso de erro
   } else {
     // Se a senha estiver errada, exibe a mensagem de erro
-    document.getElementById("avisoBotao").style.display = "block";
+    document.getElementById("erroMensagem").style.display = "block";
   }
 });
 
@@ -29,10 +29,10 @@ document.getElementById("confirmarSenhaTexto").addEventListener("click", functio
     // Se a senha estiver correta, exibe o botão "Mostrar Texto Secreto"
     document.getElementById("mostrarTexto").style.display = "block";
     document.getElementById("senhaTexto").style.display = "none"; // Esconde o campo de senha
-    document.getElementById("avisoTexto").style.display = "none"; // Remove o aviso de erro
+    document.getElementById("erroMensagem").style.display = "none"; // Remove o aviso de erro
   } else {
     // Se a senha estiver errada, exibe a mensagem de erro
-    document.getElementById("avisoTexto").style.display = "block";
+    document.getElementById("erroMensagem").style.display = "block";
   }
 });
 
