@@ -1,70 +1,43 @@
-document.getElementById("meuBotao").addEventListener("click", function () {
-  // Exibe a caixa de senha para o primeiro botão
-  document.getElementById("senhaCaixa").style.display = "block";
-});
+// Senha para o primeiro botão
+document.getElementById("confirmarSenhaBotao").addEventListener("click", function() {
+  const senhaInput = document.getElementById("senhaInputBotao");
+  const senha = "12345"; // Senha para o primeiro botão
 
-document.getElementById("confirmarSenha").addEventListener("click", function () {
-  const senhaInput = document.getElementById("senhaInput").value;
-  const senhaCorreta = "02012005"; // Senha de exemplo para a primeira caixa
-
-  if (senhaInput === senhaCorreta) {
-    // Esconde a caixa de senha e exibe a galeria
-    document.getElementById("senhaCaixa").style.display = "none";
-    document.getElementById("imageGallery").style.display = "grid";
-    mostrarImagens();
-    document.getElementById("mostrarTexto").style.display = "block"; // Exibe o botão de mostrar o texto secreto
+  if (senhaInput.value === senha) {
+    // Se a senha estiver correta, exibe o botão "Clica Aqui"
+    document.getElementById("meuBotao").style.display = "block";
+    document.getElementById("senhaBotao").style.display = "none"; // Esconde o campo de senha
+    document.getElementById("erroMensagem").style.display = "none"; // Remove o aviso de erro
   } else {
-    // Exibe a mensagem de erro
-    document.getElementById("aviso").style.display = "block";
+    // Se a senha estiver errada, exibe a mensagem de erro
+    document.getElementById("erroMensagem").style.display = "block";
   }
 });
 
-// Função para adicionar as imagens dinamicamente
-function mostrarImagens() {
-  const gallery = document.getElementById("imageGallery");
-  const imagens = [
-    { src: "./images/picture1.jpg", texto: "Finalmente a gente tinha tirado uma foto boa juntos, porque aquela primeira a gente ficou parecendo dois ET" },
-    { src: "./images/picture2.jpg", texto: "Pessoalmente eu adoro essa" },
-    { src: "./images/picture3.jpg", texto: "A gente adorou essa né, ficou boa demais" },
-    { src: "./images/picture4.jpg", texto: "Essa ficou ótima em, eu de gorro e tu de boina militar. Uma pena que não possa te dar a boina porque ficou ótima em ti... se quer ajuda com a segunda senha lembre da data do meu aniversário" }
-  ]
-  ];
-
-  imagens.forEach(({ src, texto }) => {
-    const figure = document.createElement("figure");
-
-    const img = document.createElement("img");
-    img.src = src;
-    img.alt = "Foto da galeria";
-    img.style.width = "100%";
-    img.style.margin = "10px";
-
-    const caption = document.createElement("figcaption");
-    caption.innerText = texto;
-
-    figure.appendChild(img);
-    figure.appendChild(caption);
-    gallery.appendChild(figure);
-  });
-}
-
-// Função para exibir a caixa de senha do botão "Mostrar Texto Secreto"
-document.getElementById("mostrarTexto").addEventListener("click", function () {
-  // Exibe a caixa de senha para o texto secreto
-  document.getElementById("senhaCaixaSecreta").style.display = "block";
+// Função para exibir o segundo botão "Mostrar Texto Secreto" ao clicar em "Clica Aqui"
+document.getElementById("meuBotao").addEventListener("click", function() {
+  const senhaTextoContainer = document.getElementById("senhaTexto");
+  senhaTextoContainer.style.display = "block"; // Exibe o campo para senha do segundo botão
 });
 
-// Caixa de senha do botão "Mostrar Texto Secreto"
-document.getElementById("confirmarSenhaSecreta").addEventListener("click", function () {
-  const senhaInputSecreta = document.getElementById("senhaInputSecreta").value;
-  const senhaCorretaSecreta = "03122005"; // Senha do texto secreto, altere conforme necessário
+// Senha para o segundo botão
+document.getElementById("confirmarSenhaTexto").addEventListener("click", function() {
+  const senhaInputTexto = document.getElementById("senhaInputTexto");
+  const senhaTexto = "67890"; // Senha para o segundo botão
 
-  if (senhaInputSecreta === senhaCorretaSecreta) {
-    // Se a senha estiver correta, exibe o texto secreto
-    document.getElementById("textoSecreto").style.display = "block";  // Torna o texto visível
-    document.getElementById("senhaCaixaSecreta").style.display = "none"; // Esconde a caixa de senha
+  if (senhaInputTexto.value === senhaTexto) {
+    // Se a senha estiver correta, exibe o botão "Mostrar Texto Secreto"
+    document.getElementById("mostrarTexto").style.display = "block";
+    document.getElementById("senhaTexto").style.display = "none"; // Esconde o campo de senha
+    document.getElementById("erroMensagem").style.display = "none"; // Remove o aviso de erro
   } else {
-    // Exibe a mensagem de erro
-    alert("Senha incorreta! Tente novamente.");
+    // Se a senha estiver errada, exibe a mensagem de erro
+    document.getElementById("erroMensagem").style.display = "block";
   }
+});
+
+// Exibe o texto secreto ao clicar no botão "Mostrar Texto Secreto"
+document.getElementById("mostrarTexto").addEventListener("click", function() {
+  const textoSecreto = document.getElementById("textoSecreto");
+  textoSecreto.style.display = textoSecreto.style.display === "none" ? "block" : "none";
 });
