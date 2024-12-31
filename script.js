@@ -27,7 +27,7 @@ function mostrarImagens() {
     { src: "./images/picture2.jpg", texto: "Pessoalmente eu adoro essa" },
     { src: "./images/picture3.jpg", texto: "A gente adorou essa né, ficou boa demais" },
     { src: "./images/picture4.jpg", texto: "Essa ficou ótima em, eu de gorro e tu de boina militar. Uma pena que não possa te dar a boina porque ficou ótima em ti... se quer ajuda com a segunda senha lembre da data do meu aniversário" }
-  ];" }
+  ]
   ];
 
   imagens.forEach(({ src, texto }) => {
