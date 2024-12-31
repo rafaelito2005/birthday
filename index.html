@@ -1,48 +1,46 @@
-        <!DOCTYPE html>
-        <html lang="pt-BR">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Happy Birthday Armandinha</title>
-          <link rel="stylesheet" href="style.css">
-        </head>
-        <body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Armandinha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-          <header>
-            <h1>🎉Feliz Aniversário Armandinha🎉</h1>
-            <p>20 aninhos meus parabéns🎂</p>
-          </header>
+  <header>
+    <h1>🎉Feliz Aniversário Armandinha🎉</h1>
+    <p>20 aninhos meus parabéns🎂</p>
+  </header>
 
-          <main>
-            <button id="meuBotao">Clica Aqui</button>
+  <main>
+    <button id="meuBotao">Clica Aqui</button>
+    <button id="mostrarTexto" style="display: none;">Mostrar Texto Secreto</button>
 
-            <div id="senhaCaixa" class="senha-container" style="display: none;">
-              <input type="password" id="senhaInput" placeholder="Digite a senha">
-              <button id="confirmarSenha">Confirmar</button>
-              <p id="aviso" style="color: red; display: none;">Senha incorreta. Tente novamente.</p>
-            </div>
+    <div id="textoSecreto" class="texto-secreto" style="display: none;">
+      <p>Aproveita teu dia meu bem, Deus abençoe sua vida e saiba que me importo e me preocupo com você. Sempre que precisar pode contar comigo ta? Posso não estar ai agora, mas se tivesse te daria um abraço bem apertado e diria: Feliz Aniversário🥳🎉</p>
+    </div>
 
-            <div id="imageGallery" class="gallery" style="display: none;"></div>
+    <div id="erroMensagem" style="color: red; display: none;">
+      <p>Erro. Tente Novamente.</p>
+    </div>
 
-            <!-- Botão para revelar o texto secreto (inicialmente oculto) -->
-            <button id="mostrarTexto">Mostrar Texto Secreto</button>
-            <!-- Texto escondido -->
-            <div id="textoSecreto" class="texto-secreto" style="display: none;">
-              <p>Aproveita teu dia meu bem, Deus abençoe sua vida e saiba que me importo e me preocupo com você. Sempre que precisar pode contar comigo ta? Posso não estar ai agora, mas se tivesse te daria um abraço bem apertado e diria: Feliz Aniversário🥳🎉</p>
-            </div>
+    <div id="senhaBotao">
+      <input type="password" id="senhaInputBotao" placeholder="Digite a senha para liberar o botão">
+      <button id="confirmarSenhaBotao">Confirmar</button>
+    </div>
 
-          </main>
+    <div id="senhaTexto" style="display: none;">
+      <input type="password" id="senhaInputTexto" placeholder="Digite a senha para liberar o texto secreto">
+      <button id="confirmarSenhaTexto">Confirmar</button>
+    </div>
 
-          <!-- Caixa de senha do texto secreto -->
-          <div id="senhaCaixaSecreta" class="senha-container" style="display: none;">
-            <input type="password" id="senhaInputSecreta" placeholder="Digite a senha">
-            <button id="confirmarSenhaSecreta">Confirmar</button>
-          </div>
+  </main>
 
-          <footer>
-            <p>Créditos: Rafinha e Armandinha</p>
-          </footer>
+  <footer>
+    <p>Créditos: Rafinha e Armandinha</p>
+  </footer>
 
-          <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
